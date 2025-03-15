@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "8d14fb95-40c5-4789-a74a-2683d10f1c98",
+		"name": "ez-task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43128208"
+	},
+	"item": [
+		{
+			"name": "API Dump",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@ez.works\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://test.ezworks.ai/api",
+					"protocol": "https",
+					"host": [
+						"test",
+						"ezworks",
+						"ai"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
