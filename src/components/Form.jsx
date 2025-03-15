@@ -8,6 +8,7 @@ const Form = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
   const [message, setMessage] = useState("");
 
@@ -21,6 +22,7 @@ const Form = () => {
       const response = await axios.post("https://test.ezworks.ai/api", data);
       if (response.status === 200) {
         setMessage("Form Submitted");
+        reset();
       }
     } catch (error) {
       setMessage("Submission failed. Please try again.");
