@@ -11,13 +11,14 @@ const Form = () => {
     reset,
   } = useForm();
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = async (data) => {
     if (data.email.endsWith("@ez.works")) {
       setMessage("Email ending with @ez.works not allowed!");
       return;
     }
-
+    setLoading(true);
     try {
       const response = await axios.post("https://test.ezworks.ai/api", data);
       if (response.status === 200) {
@@ -27,6 +28,7 @@ const Form = () => {
     } catch (error) {
       setMessage("Submission failed. Please try again.");
     }
+    setLoading(false);
   };
 
   return (
@@ -43,7 +45,9 @@ const Form = () => {
           })}
           placeholder="Email Address"
         />
-        <button type="submit">Contact Me</button>
+        <button type="submit" disabled={loading}>
+          {loading ? "Submitting..." : "Contact Me"}
+        </button>
         {errors.email && <p className="error">{errors.email.message}</p>}
         <p className="error">{message}</p>
       </form>
