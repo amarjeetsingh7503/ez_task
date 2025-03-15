@@ -1,0 +1,23 @@
+input {
+    padding: 10px 5px;
+    width: 60%;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+button {
+    margin-left: 20px;
+    padding: 10px 20px;
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+    input {
+        width: 50%;
+    }
+
+}

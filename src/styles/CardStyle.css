@@ -1,0 +1,37 @@
+.card {
+    background-color: rgb(0, 0, 78);
+    padding: 15px;
+    width: 160px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.card-heading {
+    color: lightblue;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.card-description {
+    color: white;
+}
+
+.error {
+    color: red;
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 120px;
+        height: 120px;
+        font-size: 14px;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    .card {
+        width: 120px;
+        height: 120px;
+        font-size: 14px;
+    }
+  }
