@@ -46,7 +46,7 @@ const Form = () => {
           placeholder="Email Address"
         />
         <button type="submit" disabled={loading}>
-          {loading ? "Submitting..." : "Contact Me"}
+          {loading ? "Submitting...." : "Contact Me"}
         </button>
         {errors.email && <p className="error">{errors.email.message}</p>}
         <p className="error">{message}</p>
